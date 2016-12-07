@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {Link} from 'react-router';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <ul style={{listStyle: 'none', padding: 0, display: 'flex', justifyContent: 'space-around'}} className="Nav">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/stores">Stores</Link></li>
+          <li><Link to="/about">About</Link></li>
+        </ul>
+        {this.props.children}
       </div>
     );
   }
