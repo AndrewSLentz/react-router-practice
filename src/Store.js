@@ -35,7 +35,7 @@ export default class Store extends Component {
             )
           })}
         </ul>
-        <div className='map' style={{height: '450px', width: '80%'}}>
+        <div className='map' style={{height: '450px', width: '80%', marginBottom: '1rem'}}>
           <GoogleMap bootstrapURLKeys={{key: 'AIzaSyAC6bxSUXJXxRjFBdu_pxYULCRTgBP7O-c'}} center={{lat: this.state.storeResult.lat, lng: this.state.storeResult.lng}} defaultZoom={11}>
             <MyStore lat={this.state.storeResult.lat} lng={this.state.storeResult.lng} />
           </GoogleMap>
